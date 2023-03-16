@@ -142,7 +142,7 @@ async function getForexData(){
       let html = await forexPage.$eval('.tv-widget-watch-list__symbols-wrapper', (element) => {
         return element.innerHTML;
       }) 
-
+ 
       var $ = Cheerio.load(html);
       const listItems = $('.tv-widget-watch-list__row');
       let data = [];
